@@ -237,7 +237,7 @@ jobs:
         sudo make install
       name: 'install mod_h2'
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
     - run: |
         sudo python3 -m pip install -r tests/requirements.txt -r tests/http/requirements.txt
