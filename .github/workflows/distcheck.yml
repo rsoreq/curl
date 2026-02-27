@@ -39,7 +39,7 @@ jobs:
     - run: ./maketgz 99.98.97
       name: 'maketgz'
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
       with:
         name: 'release-tgz'
         path: 'curl-99.98.97.tar.gz'
@@ -63,7 +63,7 @@ jobs:
     timeout-minutes: 30
     needs: maketgz-and-verify-in-tree
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8
       with:
         name: 'release-tgz'
 
@@ -86,7 +86,7 @@ jobs:
     timeout-minutes: 30
     needs: maketgz-and-verify-in-tree
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8
       with:
         name: 'release-tgz'
 
@@ -107,7 +107,7 @@ jobs:
     timeout-minutes: 30
     needs: maketgz-and-verify-in-tree
     steps:
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8
       with:
         name: 'release-tgz'
 
