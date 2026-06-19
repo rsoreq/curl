@@ -80,7 +80,7 @@ jobs:
         cmake --build . --parallel
         cmake --install .
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
 
     - run: autoreconf -fi
       name: 'autoreconf'
@@ -139,7 +139,7 @@ jobs:
         cmake --build . --parallel
         cmake --install .
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
 
     # CMAKE_COMPILE_WARNING_AS_ERROR is available in cmake 3.24 or later
     - run: cmake -Bbuild -DOPENSSL_ROOT_DIR=$HOME/awslc -DBUILD_SHARED_LIBS=ON -DCMAKE_COMPILE_WARNING_AS_ERROR=ON .
