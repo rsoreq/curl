@@ -164,7 +164,7 @@ jobs:
     - run: python3 -m pip install impacket
       name: 'pip3 install'
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
 
     - run: autoreconf -fi
       name: 'autoreconf'
@@ -233,7 +233,7 @@ jobs:
         esac
       name: 'brew unlink openssl'
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
 
     - run: cmake -S. -Bbuild -DCURL_WERROR=ON -DPICKY_COMPILER=ON ${{ matrix.build.generate }}
       name: 'cmake generate'
