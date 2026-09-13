@@ -60,7 +60,7 @@ jobs:
       name: 'install prereqs and impacket'
 
     - name: cache awslc
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-awslc
       env:
         cache-name: cache-awslc
@@ -80,7 +80,7 @@ jobs:
         cmake --build . --parallel
         cmake --install .
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
     - run: autoreconf -fi
       name: 'autoreconf'
@@ -119,7 +119,7 @@ jobs:
       name: 'install prereqs and impacket'
 
     - name: cache awslc
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-awslc
       env:
         cache-name: cache-awslc
@@ -139,7 +139,7 @@ jobs:
         cmake --build . --parallel
         cmake --install .
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
     # CMAKE_COMPILE_WARNING_AS_ERROR is available in cmake 3.24 or later
     - run: cmake -Bbuild -DOPENSSL_ROOT_DIR=$HOME/awslc -DBUILD_SHARED_LIBS=ON -DCMAKE_COMPILE_WARNING_AS_ERROR=ON .
