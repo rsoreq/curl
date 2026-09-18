@@ -47,4 +47,4 @@ permissions: {}
 
 jobs:
   Fuzzing:
-    uses: curl/curl-fuzzer/.github/workflows/ci.yml@master
+    uses: curl/curl-fuzzer/.github/workflows/ci.yml@2e0a7d155d9b4572de723fd06a08b8d42c944d73 # master
