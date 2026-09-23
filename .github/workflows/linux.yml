@@ -195,7 +195,7 @@ jobs:
         apk add --no-cache build-base autoconf automake libtool perl openssl-dev libssh2-dev zlib-dev brotli-dev zstd-dev libidn2-dev openldap-dev heimdal-dev libpsl-dev py3-impacket py3-asn1 py3-six py3-pycryptodomex perl-time-hires openssh stunnel sudo git
       name: 'install dependencies'
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
     - if: contains(matrix.build.install_steps, 'gcc-11')
       run: |
@@ -209,7 +209,7 @@ jobs:
 
     - name: cache bearssl
       if: contains(matrix.build.install_steps, 'bearssl')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-bearssl
       env:
         cache-name: cache-bearssl
@@ -230,7 +230,7 @@ jobs:
 
     - name: cache libressl
       if: contains(matrix.build.install_steps, 'libressl')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-libressl
       env:
         cache-name: cache-libressl
@@ -249,7 +249,7 @@ jobs:
 
     - name: cache mbedtls
       if: contains(matrix.build.install_steps, 'mbedtls')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-mbedtls
       env:
         cache-name: cache-mbedtls
@@ -266,7 +266,7 @@ jobs:
 
     - name: cache openssl3
       if: contains(matrix.build.install_steps, 'openssl3')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-openssl3
       env:
         cache-name: cache-openssl3
@@ -284,7 +284,7 @@ jobs:
 
     - name: cache quictls
       if: contains(matrix.build.install_steps, 'quictls')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-quictls
       env:
         cache-name: cache-quictls
@@ -302,7 +302,7 @@ jobs:
 
     - name: cache msh3
       if: contains(matrix.build.install_steps, 'msh3')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-msh3
       env:
         cache-name: cache-msh3
@@ -329,7 +329,7 @@ jobs:
 
     - name: cache rustls
       if: contains(matrix.build.install_steps, 'rustls')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-rustls
       env:
         cache-name: cache-rustls
@@ -371,7 +371,7 @@ jobs:
 
     - name: cache mod_h2
       if: contains(matrix.build.install_steps, 'pytest')
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-mod_h2
       env:
         cache-name: cache-mod_h2
