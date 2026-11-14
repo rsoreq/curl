@@ -82,7 +82,7 @@ jobs:
       name: 'install prereqs and impacket, pytest, crypto'
 
     - name: cache nghttpx
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-nghttpx
       env:
         cache-name: cache-nghttpx
@@ -126,7 +126,7 @@ jobs:
       name: 'install nghttp2'
 
     - name: cache quiche
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-quiche
       env:
         cache-name: cache-quiche
@@ -154,7 +154,7 @@ jobs:
       name: 'build quiche and boringssl'
 
     - name: cache mod_h2
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
       id: cache-mod_h2
       env:
         cache-name: cache-mod_h2
@@ -177,7 +177,7 @@ jobs:
         sudo make install
       name: 'install mod_h2'
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
     - run: |
         sudo python3 -m pip install -r tests/requirements.txt -r tests/http/requirements.txt
